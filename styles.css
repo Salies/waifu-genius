@@ -1,0 +1,188 @@
+body{
+    background:#f6f7fb;
+    overflow: hidden;
+}
+
+header{
+    font-family: 'Poiret One', cursive;
+    font-size: 5.5em;
+    padding: 25px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color:#1e2124;
+}
+
+.display{
+    display:block!important;
+}
+
+.btn{
+    font-family: 'Julius Sans One', sans-serif;
+    cursor:pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.start{
+    z-index: 2;
+    margin: 15px auto 0 auto;
+    font-size: 1.5em;
+    width: 125px;
+    height: 125px;
+    line-height: 125px;
+    text-align: center;
+    border-radius: 50%;
+    color: #99AAB5;
+    border: 3px solid #99AAB5;
+    transition:.25s;
+}
+
+.start:hover{
+    background:#e6e9ee;
+}
+
+.c, .credits{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.c{
+    font-weight:300;
+    font-size:12px;
+    color: #99AAB5;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+}
+
+.credits{
+    font-size:14px;
+    width:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:#fff;
+    padding:25px;
+}
+
+.overlay{
+    display:none;
+    z-index: 10;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.75);
+}
+
+.waifus{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    max-width: 75%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.waifus section{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+    width: 25%;
+    align-self: flex-end;
+    pointer-events: none;
+}
+
+.waifus img{
+    display: block;
+    align-self:center;
+}
+
+.r img{
+    width: 300%; /*300% * 3*/
+    margin-left:-200%; /*-100% * 2*/
+}
+
+.w img{
+    width: 270%; /*90% * 3*/
+    margin-left:-180%; /*-90% * 2*/
+}
+
+.b img{
+    width: 80%;
+}
+
+.y img{
+    width:300%;
+    margin-left:-200%;
+}
+
+.bew{
+    position: absolute;
+    pointer-events: auto;
+}
+
+.r .bew{
+    width: 53%;
+    height: 16%;
+    bottom: 24%;
+    left: 23%;
+}
+
+.w .bew{
+    width: 55%;
+    height: 13%;
+    left: 18%;
+    bottom: 23%;
+}
+
+.b .bew{
+    width: 58%;
+    height: 20%;
+    bottom: 16%;
+    left: 13%;
+}
+
+.y .bew{
+    width: 55.25%;
+    height: 15%;
+    bottom: 20.5%;
+    left: 22.5%;
+}
+
+/*animations*/
+.r img.aww, .y img.aww{
+    margin-left:-100%;
+}
+
+.w img.aww{
+    margin-left:-90%;
+}
+
+.b img.aww{
+    background-position: 0 50%!important; background-size: 100%!important;
+}
+
+.r img.ain, .w img.ain, .y img.ain{
+    margin-left:0!important;
+}
+
+.b img.ain{
+    background-position: 0 0%!important; background-size: 100%!important;
+}
+ 
+.b img{ max-width: 100%; background-size: 100%; background-image: url('Waifus/blake.jpg'); background-position: 0 100%; background-size: 100%;}
