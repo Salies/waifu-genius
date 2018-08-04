@@ -43,6 +43,7 @@ function start(){
     let x = 4, interval = setInterval(function(){
         x--;
         if(x===0){
+            running=true;
             $('.start').innerHTML = 'GO!';
             round();
             clearInterval(interval);
@@ -71,14 +72,14 @@ function verify(c){
     }
     else{
         new Audio(`Sounds/lose.ogg`).play();
-        $('.start').innerHTML = '<span style="font-size: 0.7em;display: block;line-height: 20px;margin-top: 45px;"><span style="color: #f04747;">Game Over</span> Try Again?</span>';
+        $('.start').innerHTML = '<span class="war"><span style="color: #f04747;">Game Over</span> <span class="pc">Try Again?</span><span class="mobile">Retry?</span></span>';
         running = false;
     }
 }
 
 //event triggers
 $('.start').addEventListener('click', function(){
-    if(running===false){running=true; start()}
+    if(running===false){start()}
 });
 
 document.querySelectorAll('.bew').forEach(function(elem) {
@@ -101,7 +102,9 @@ document.querySelectorAll('.bew').forEach(function(elem) {
 
 document.querySelectorAll('.waifus section').forEach(function(elem) {
     elem.addEventListener("click", function() {
-        verify(elem.className);
+        if(running===true){
+            verify(elem.className);
+        }
     });
 });
 

@@ -40,6 +40,11 @@ header{
     transition:.25s;
 }
 
+header, .start{
+    position: relative;
+    z-index:100;
+}
+
 .start:hover{
     background:#e6e9ee;
 }
@@ -186,3 +191,34 @@ header{
 }
  
 .b img{ max-width: 100%; background-size: 100%; background-image: url('Waifus/blake.jpg'); background-position: 0 100%; background-size: 100%;}
+
+.pc{
+    display:block;
+}
+
+.mobile{
+    display:none;
+}
+
+.war{
+    font-size: 0.7em;display: block;line-height: 20px;margin-top: 45px;
+}
+/*mobile*/
+@media screen and (max-width:1024px){
+    header{
+        font-size:7.5vh;
+    }
+
+    .start{
+        width: 5vw;
+        height: 5vw;
+        margin: 0 auto;
+        font-size: 2.75vh;
+        line-height: 5vw;
+    }
+
+    .war{
+        margin-top:0;
+        line-height: 2.5vh;
+    }
+}
